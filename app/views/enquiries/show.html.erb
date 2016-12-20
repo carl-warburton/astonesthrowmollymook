@@ -4,6 +4,31 @@
 
 <p id="notice"><%= notice %></p>
 
+<table class="striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @enquiry.name %></td>
+        <td><%= @enquiry.phone %></td>
+        <td><%= @enquiry.email %></td>
+        <td><%= @enquiry.message %></td>
+        <td><%= link_to 'Edit', edit_enquiry_path(@enquiry) %></td>
+        <td><%= link_to 'Destroy', @enquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  </tbody>
+</table>
+
+
+
 <p>
   <strong>Name:</strong>
   <%= @enquiry.name %>

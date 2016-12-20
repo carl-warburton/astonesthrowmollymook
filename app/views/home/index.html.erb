@@ -20,13 +20,13 @@
           <h5 class="header col s12 grey-lighten-1 light">Mollymook Beach Holiday Rental</h5>
         </div>
         <div class="row center">
-          <a href="#" id="download-button" class="btn-large waves-effect waves-light transparent">Enquire Now</a>
+          <a href="#contactme" id="download-button" class="btn-large waves-effect waves-light transparent light">Enquire Now</a>
         </div>
         <br><br>
 
       </div>
     </div>
-    <div class="parallax"><img src="assets/mreef.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><%= image_tag "mreef.jpg"%></div>
   </div>
 
 
@@ -68,7 +68,7 @@
   </div>
 
   <div class="parallax-container valign-wrapper">
-    <div class="parallax"><img src="assets/image1.jpg" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><%= image_tag "mreef.jpg"%></div>
   </div>
 
   <div class="container">
@@ -88,7 +88,7 @@
 
   <div class="parallax-container valign-wrapper">
 
-    <div class="parallax"><img src="assets/viewfrombeach.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><%= image_tag "mreef.jpg"%></div>
   </div>
 
   <div class="container">
@@ -157,7 +157,7 @@
 
 
   <div class="parallax-container valign-wrapper">
-    <div class="parallax"><img src="assets/fireplace.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><%= image_tag "mreef.jpg"%></div>
   </div>
 
   <div class="container">
@@ -188,7 +188,7 @@
 
 
   <div class="parallax-container valign-wrapper">
-    <div class="parallax"><img src="assets/mollymookbeach.jpg" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><%= image_tag "mreef.jpg"%></div>
   </div>
 
   <div class="container">
@@ -238,23 +238,15 @@ Open plan living with a huge front verandah for entertaining as well as rear dec
             </p>
             <p class="grey-text text-lighten-4 light">
               <% if admin_signed_in? %>
-
-                <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>
-
+                <%= link_to('Logout', destroy_admin_session_path, :method => :delete)%><br>
               <% else %>
-
-                <%= link_to('Admin', new_admin_session_path)  %>
-
+                <%= link_to('Management', new_admin_session_path, :class => "grey-text text-lighten-4 light")  %>
               <% end %>
               <% if admin_signed_in? %>
-
-                <%= link_to('Edit Account', edit_admin_registration_path) %>
-
+                <%= link_to('Edit Account', edit_admin_registration_path) %><br>
               <% end %>
               <% if admin_signed_in? %>
-
                 <%= link_to('View Enquiries', enquiries_path) %>
-
               <% end %>
             </p>
         </div>
