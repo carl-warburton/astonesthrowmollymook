@@ -1,0 +1,44 @@
+<nav class="grey" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#" class="brand-logo light white-text">Contact Us</a>
+    <ul class="right hide-on-med-and-down grey-lighten-4 light">
+      <% if admin_signed_in? %>
+        <li>
+        <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>
+        </li>
+      <% else %>
+        <li>
+        <%= link_to('Admin', new_admin_session_path)  %>
+        </li>
+      <% end %>
+      <% if admin_signed_in? %>
+        <li>
+        <%= link_to('Edit Account', edit_admin_registration_path) %>
+        </li>
+      <% end %>
+      <% if admin_signed_in? %>
+        <li>
+        <%= link_to('View Enquiries', enquiries_path) %>
+        </li>
+      <% end %>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav grey-darken-1">
+      <% if admin_signed_in? %>
+        <li>
+        <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>
+        </li>
+      <% else %>
+        <li>
+        <%= link_to('Admin', new_admin_session_path)  %>
+        </li>
+      <% end %>
+      <% if admin_signed_in? %>
+        <li>
+        <%= link_to('Edit Account', edit_admin_registration_path) %>
+        </li>
+      <% end %>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
