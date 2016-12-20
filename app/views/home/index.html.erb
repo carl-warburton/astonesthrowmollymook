@@ -236,27 +236,27 @@ Open plan living with a huge front verandah for entertaining as well as rear dec
           <p class="grey-text text-lighten-4 light">
             Our property is Schoolies/Bucks Party free, sorry for any inconvenience.
             </p>
-            <ul class="white-text text-lighten-4 light">
+            <p class="grey-text text-lighten-4 light">
               <% if admin_signed_in? %>
-                <li>
+
                 <%= link_to('Logout', destroy_admin_session_path, :method => :delete) %>
-                </li>
+
               <% else %>
-                <li>
+
                 <%= link_to('Admin', new_admin_session_path)  %>
-                </li>
+
               <% end %>
               <% if admin_signed_in? %>
-                <li>
+
                 <%= link_to('Edit Account', edit_admin_registration_path) %>
-                </li>
+
               <% end %>
               <% if admin_signed_in? %>
-                <li>
+
                 <%= link_to('View Enquiries', enquiries_path) %>
-                </li>
+
               <% end %>
-            </ul>
+            </p>
         </div>
       </div>
     </div>
